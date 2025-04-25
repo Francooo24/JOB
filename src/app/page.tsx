@@ -24,7 +24,8 @@ export default function Home() {
       <header className="w-full from-gray-600 via-gray-500 to-gray-400 text-white shadow-xl fixed top-0 left-0 z-10 animate-slide-in">
         <div className="max-w-screen-xl mx-auto flex justify-between items-center px-8 py-6">
           <div className="flex items-center space-x-4 animate-bounce-delay">
-            <a href="/" className="flex items-center">
+          <Link href="/" className="flex items-center">
+
               <Image
                 className="rounded-full shadow-xl transform transition-all hover:scale-110"
                 src="/images/as.jpg"
@@ -33,7 +34,7 @@ export default function Home() {
                 height={40}
                 priority
               />
-            </a>
+            </Link>
           </div>
           <nav className="animate-fade-in delay-100">
             <ul className="flex space-x-12 text-lg font-medium uppercase tracking-wide">
@@ -41,12 +42,11 @@ export default function Home() {
                 const href = text === "Home" ? "/" : `/${text.toLowerCase().replace(" ", "")}`;
                 return (
                   <li key={idx}>
-                    <a
-                      href={href}
+                    <Link href={href} 
                       className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700"
                     >
                       {text}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}
@@ -131,12 +131,12 @@ export default function Home() {
 
         {/* Learn More Button */}
         <div className="flex gap-4 items-center flex-col sm:flex-row mt-16 animate-fade-in">
-          <a
+          <Link href="/about"
             className="rounded-full bg-gray-200 text-gray-800 font-semibold px-8 py-4 hover:bg-gray-300 hover:shadow-lg transition duration-300 transform hover:scale-105"
-            href="/about"
+           
           >
             Learn More About Us
-          </a>
+          </Link>
         </div>
       </main>
 
@@ -144,15 +144,15 @@ export default function Home() {
       <footer className="bg-gray-800 text-white py-6 mt-8">
         <div className="max-w-screen-xl mx-auto flex flex-col items-center gap-4 text-center px-4">
           <div className="flex flex-wrap justify-center gap-6">
-            <a className="hover:underline transition-colors duration-300 hover:text-yellow-400" href="/contact">
+            <Link href="/contact" className="hover:underline transition-colors duration-300 hover:text-yellow-400" >
               Contact Us
-            </a>
-            <a className="hover:underline transition-colors duration-300 hover:text-yellow-400" href="/terms">
+            </Link>
+            <Link href="/terms" className="hover:underline transition-colors duration-300 hover:text-yellow-400" >
               Terms & Conditions
-            </a>
-            <a className="hover:underline transition-colors duration-300 hover:text-yellow-400" href="/privacy">
+            </Link>
+            <Link className="hover:underline transition-colors duration-300 hover:text-yellow-400" href="/privacy">
               Privacy Policy
-            </a>
+            </Link>
           </div>
           <hr className="w-full max-w-xs my-2" />
         </div>

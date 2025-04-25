@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link"; 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -57,30 +57,29 @@ export default function Login() {
           </div>
           {/* Navigation Links */}
           <nav className="animate-fade-in delay-100">
-            <ul className="flex space-x-12 text-lg font-medium uppercase tracking-wide">
-              <li>
-                <a href="/" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
-                  Home
-                </a>
-              </li>
-
-              <li>
-                <a href="/resume" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
-                  Resume
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="/login" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
-                  Login
-                </a>
-              </li>
-            </ul>
-          </nav>
+              <ul className="flex space-x-12 text-lg font-medium uppercase tracking-wide">
+                <li>
+                  <Link href="/" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/resume" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
+                    Resume
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/login" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
+                    Login
+                  </Link>
+                </li>
+              </ul>
+            </nav>
         </div>
       </header>
 
@@ -144,12 +143,13 @@ export default function Login() {
 
         {/* Sign Up Link */}
         <div className="mt-6 text-center">
-          <p className="text-white">
-            Don't have an account?{" "}
-            <a href="/signup" className="text-yellow-500 font-semibold hover:text-yellow-300 transition-colors">
-              Sign Up
-            </a>
-          </p>
+        <p className="text-white">
+          Don't have an account?{" "}
+          <Link href="/signup" className="text-yellow-500 font-semibold hover:text-yellow-300 transition-colors">
+            Sign Up
+          </Link> 
+        </p>
+
         </div>
       </main>
     </div>

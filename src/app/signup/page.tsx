@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Signup() {
@@ -56,25 +57,25 @@ export default function Signup() {
           <nav className="animate-fade-in delay-100">
             <ul className="flex space-x-12 text-lg font-medium uppercase tracking-wide">
               <li>
-                <a href="/" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
-                  Home
-                </a>
+              <Link href="/" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
+                Home
+              </Link>
               </li>
 
               <li>
-                <a href="/resume" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
-                  Resume
-                </a>
+              <Link href="/resume" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
+                Resume
+              </Link>
               </li>
               <li>
-                <a href="/about" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
-                  About Us
-                </a>
+              <Link href="/about" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
+                About Us
+              </Link>
               </li>
               <li>
-                <a href="/login" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
-                  Login
-                </a>
+              <Link href="/login" className="hover:text-yellow-300 bg-black transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
+                Login
+              </Link>
               </li>
             </ul>
           </nav>

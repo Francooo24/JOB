@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 
 export default function Resume() {
   return (
@@ -7,7 +9,7 @@ export default function Resume() {
       <header className="w-full bg-gray-100 shadow fixed top-0 left-0 z-10">
         <div className="max-w-screen-xl mx-auto flex justify-between items-center px-8 py-4">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <Image
               className="rounded shadow-lg transition-all hover:scale-105"
               src="/images/as.jpg"
@@ -16,30 +18,30 @@ export default function Resume() {
               height={50}
               priority
             />
-          </a>
+          </Link>
           {/* Navigation Links */}
           <nav className="animate-fade-in delay-100">
             <ul className="flex space-x-12 text-lg font-medium uppercase tracking-wide">
               <li>
-                <a href="/" className="hover:text-yellow-300 bg-white transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
-                  Home
-                </a>
+              <Link href="/" className="hover:text-yellow-300 bg-white transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
+                 Home
+              </Link>
               </li>
 
               <li>
-                <a href="/resume" className="hover:text-yellow-300 bg-white transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
-                  Resume
-                </a>
+              <Link href="/resume" className="hover:text-yellow-300 bg-white transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
+                Resume
+              </Link>
               </li>
               <li>
-                <a href="/about" className="hover:text-yellow-300 bg-white transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
-                  About Us
-                </a>
+              <Link href="/about" className="hover:text-yellow-300 bg-white transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
+                About Us
+              </Link>
               </li>
               <li>
-                <a href="/login" className="hover:text-yellow-300 bg-white transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
-                  Login
-                </a>
+              <Link href="/login" className="hover:text-yellow-300 bg-white transition-colors duration-300 px-5 py-2 rounded-lg hover:bg-gray-700">
+                Login
+              </Link>
               </li>
             </ul>
           </nav>
