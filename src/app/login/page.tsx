@@ -144,11 +144,12 @@ export default function Login() {
         {/* Sign Up Link */}
         <div className="mt-6 text-center">
         <p className="text-white">
-          Don't have an account?{" "}
-          <Link href="/signup" className="text-yellow-500 font-semibold hover:text-yellow-300 transition-colors">
-            Sign Up
-          </Link> 
-        </p>
+  Don&apos;t have an account?{" "}
+  <Link href="/signup" className="text-yellow-500 font-semibold hover:text-yellow-300 transition-colors">
+    Sign Up
+  </Link>
+</p>
+
 
         </div>
       </main>
